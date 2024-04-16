@@ -10,4 +10,3 @@ class PengelolaKontak {
     fun tambahKontak(kontak: Kontak) {
         daftarKontak.add(kontak)
     }
-s
