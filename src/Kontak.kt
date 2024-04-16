@@ -9,6 +9,7 @@ class PengelolaKontak {
 
     fun tambahKontak(kontak: Kontak) {
         daftarKontak.add(kontak)
+        println("Kontak ${kontak.nama} berhasil ditambahkan.")
     }
 
     fun hapusKontak(namaKontak: String) {
