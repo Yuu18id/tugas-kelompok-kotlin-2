@@ -10,3 +10,12 @@ class PengelolaKontak {
     fun tambahKontak(kontak: Kontak) {
         daftarKontak.add(kontak)
     }
+
+    fun hapusKontak(namaKontak: String) {
+        val kontakDihapus = daftarKontak.find { it.nama == namaKontak }
+        kontakDihapus?.let {
+            daftarKontak.remove(it)
+            println("Kontak dengan nama $namaKontak berhasil dihapus.")
+        } ?: println("Kontak dengan nama $namaKontak tidak ditemukan.")
+    }
+}
