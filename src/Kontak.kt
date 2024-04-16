@@ -18,4 +18,25 @@ class PengelolaKontak {
             println("Kontak dengan nama $namaKontak berhasil dihapus.")
         } ?: println("Kontak dengan nama $namaKontak tidak ditemukan.")
     }
+
+    fun tampilkanKontak() {
+        println("\nDaftar Kontak")
+        for (kontak in daftarKontak) {
+            println("Nama\t: ${kontak.nama}\nNomor\t: ${kontak.nomor}\nEmail\t: ${kontak.email}\n")
+        }
+    }
+}
+
+//testing
+fun main() {
+    val kon1 = Kontak("Bayu", "12345", "bayu@gmail.com")
+    val kon2 = Kontak("Haidar", "09876", "haidar@gmail.com")
+    val pengelolaKontak = PengelolaKontak()
+
+    pengelolaKontak.tambahKontak(kon1)
+    pengelolaKontak.tambahKontak(kon2)
+    pengelolaKontak.tampilkanKontak()
+
+    pengelolaKontak.hapusKontak("Haidar")
+    pengelolaKontak.tampilkanKontak()
 }
